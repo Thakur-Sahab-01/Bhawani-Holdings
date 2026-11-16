@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Bhawani Holdings"
+description = "A public website for Bhawani Holdings, bringing together Maa Bhawani Construction, property services, real project photography, and dedicated enquiry routes."
+version = "1.0.0"
+id = "artifacts/bhawani-holdings"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19863
+
+[services.development]
+run = "pnpm --filter @workspace/bhawani-holdings run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/bhawani-holdings", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/bhawani-holdings/dist"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19863"
+BASE_PATH = "/"

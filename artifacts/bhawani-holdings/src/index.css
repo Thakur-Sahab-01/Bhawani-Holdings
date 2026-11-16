@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background)); --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border)); --color-input: hsl(var(--input)); --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card)); --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover)); --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary)); --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary)); --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted)); --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent)); --color-accent-foreground: hsl(var(--accent-foreground));
+  --font-sans: var(--app-font-sans); --font-serif: var(--app-font-serif);
+}
+:root {
+  --background: 40 33% 97%; --foreground: 348 16% 17%; --border: 345 24% 83%;
+  --card: 40 40% 99%; --card-foreground: 348 16% 17%; --sidebar: 40 33% 97%; --sidebar-foreground: 348 16% 17%;
+  --popover: 40 40% 99%; --popover-foreground: 348 16% 17%;
+  --primary: 348 54% 26%; --primary-foreground: 40 33% 97%; --secondary: 36 42% 84%;
+  --secondary-foreground: 348 38% 22%; --muted: 36 22% 91%; --muted-foreground: 345 9% 42%;
+  --accent: 37 43% 82%; --accent-foreground: 348 38% 22%; --destructive: 0 65% 45%;
+  --destructive-foreground: 0 0% 98%; --input: 345 24% 83%; --ring: 348 54% 26%;
+  --chart-1: 348 54% 26%; --chart-2: 36 42% 65%; --chart-3: 18 25% 48%; --chart-4: 125 18% 45%; --chart-5: 35 20% 35%;
+  --app-font-sans: 'DM Sans', sans-serif; --app-font-serif: 'Cormorant Garamond', Georgia, serif;
+  --app-font-mono: 'DM Sans', sans-serif; --radius: .4rem;
+  --primary-border: hsl(var(--primary)); --secondary-border: hsl(var(--secondary)); --muted-border: hsl(var(--muted)); --accent-border: hsl(var(--accent)); --destructive-border: hsl(var(--destructive));
+  --sidebar-border: 345 24% 83%; --sidebar-primary: 348 54% 26%; --sidebar-primary-foreground: 40 33% 97%; --sidebar-accent: 36 22% 91%; --sidebar-accent-foreground: 348 38% 22%; --sidebar-ring: 348 54% 26%;
+}
+.dark { --background: 348 18% 10%; --foreground: 40 33% 94%; --border: 345 14% 27%; --card: 348 18% 13%; --card-foreground: 40 33% 94%; --sidebar: 348 18% 10%; --sidebar-foreground: 40 33% 94%; --popover: 348 18% 13%; --popover-foreground: 40 33% 94%; --primary: 36 42% 75%; --primary-foreground: 348 18% 10%; --secondary: 348 18% 22%; --secondary-foreground: 40 33% 94%; --muted: 348 14% 20%; --muted-foreground: 36 12% 70%; --accent: 348 14% 24%; --accent-foreground: 40 33% 94%; --destructive: 0 60% 42%; --destructive-foreground: 0 0% 98%; --input: 345 14% 27%; --ring: 36 42% 75%; --chart-1: 36 42% 75%; --chart-2: 348 48% 56%; --chart-3: 125 22% 55%; --chart-4: 18 40% 58%; --chart-5: 35 24% 72%; }
+@layer base { * { @apply border-border; } body { @apply antialiased bg-background text-foreground; margin:0; font-family:var(--app-font-sans); } }
+:root { font-synthesis:none; text-rendering:optimizeLegibility; }
+html { scroll-behavior:smooth; }
+body { line-height:1.65; }
+button, input, textarea, select { font:inherit; }
+button, a { -webkit-tap-highlight-color:transparent; }
+a { color:inherit; text-decoration:none; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline:3px solid #b18b6e; outline-offset:3px; }
+::selection { background:#dfc9aa; color:#4e1929; }
+.serif { font-family:var(--app-font-serif); }
+.reveal { animation:rise-in .65s both; }
+@keyframes rise-in { from { opacity:0; transform:translateY(14px) } to { opacity:1; transform:translateY(0) } }
+@media(prefers-reduced-motion:reduce) { html{scroll-behavior:auto} *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important} }
