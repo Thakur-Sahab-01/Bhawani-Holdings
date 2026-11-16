@@ -1,0 +1,9 @@
+{
+  // Root-level Pages config so `npx wrangler deploy` works from the workspace root,
+  // where Cloudflare's build pipeline runs by default. The website artifact has its
+  // own config at artifacts/bhawani-holdings/wrangler.jsonc for deploys from there.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bhawani-holdings",
+  "pages_build_output_dir": "artifacts/bhawani-holdings/dist",
+  "compatibility_date": "2026-10-26"
+}
