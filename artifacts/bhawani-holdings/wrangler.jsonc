@@ -7,7 +7,7 @@
     {
       "binding": "ENQUIRIES_DB",
       "database_name": "bhawani-holdings-enquiries",
-      "database_id": "REPLACE_WITH_CLOUDFLARE_D1_DATABASE_ID",
+      "database_id": "f06256a2-b09d-48af-a9de-ef6cd9590125",
       "migrations_dir": "migrations"
     }
   ]

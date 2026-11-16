@@ -5,5 +5,13 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "bhawani-holdings",
   "pages_build_output_dir": "artifacts/bhawani-holdings/dist",
-  "compatibility_date": "2026-10-26"
+  "compatibility_date": "2026-10-26",
+  "d1_databases": [
+    {
+      "binding": "ENQUIRIES_DB",
+      "database_name": "bhawani-holdings-enquiries",
+      "database_id": "f06256a2-b09d-48af-a9de-ef6cd9590125",
+      "migrations_dir": "artifacts/bhawani-holdings/migrations"
+    }
+  ]
 }
